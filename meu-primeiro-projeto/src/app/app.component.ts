@@ -3,17 +3,25 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template:`
+  <button (click)="destruirComponent()">Destruir componente</button>
+  <br>
   {{valor}}
   <button (click)="adicionar()">Adicionar</button>
-  <app-title></app-title>
+  <app-title *ngIf="destruir" ></app-title>
   1<router-outlet></router-outlet>
   `,
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentChecked, AfterContentInit, AfterViewInit, AfterViewChecked {
 
+  public destruir:boolean = true;
+
   public valor: number = 1;
 
   constructor() { }
+
+  public destruirComponent(): void {
+    this.destruir = !this.destruir;
+  }
 
   public adicionar(): number{
     return this.valor++;
