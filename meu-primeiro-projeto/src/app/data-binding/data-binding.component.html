@@ -14,4 +14,17 @@
 <button [disabled]="checkedDisabled">Button</button>
 
 <img [src]="imgSrc">
+<br>
+<br>
+<hr>
+<h2>Event Binding</h2>
+
+<button (click)="alertaInfo($event)">Alerta</button>
+
+<div (mousemove)="mouseMoveTeste($event)" style="background-color: red; width: 300px; height: 300px;"></div>
+
+{{ position.x }} - {{ position.y }}
+<br>
+<br>
+<hr>
 
