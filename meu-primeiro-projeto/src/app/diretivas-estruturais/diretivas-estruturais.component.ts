@@ -9,6 +9,11 @@ export class DiretivasEstruturaisComponent implements OnInit {
 
   public condition: boolean = true;
   public conditionClick: boolean = true;
+  public list: Array<{nome: string, idade: number}> = [
+    { nome: "Marcos Henrique", idade: 30 },
+    { nome: "Tonin carlos" , idade: 25 },
+    { nome: "Macedo cabuloso" , idade: 28 },
+  ]
 
   constructor() { }
 
@@ -30,6 +35,10 @@ export class DiretivasEstruturaisComponent implements OnInit {
     }else{
       this.conditionClick = true;
     }
+  }
+
+  public onClickAddList(){
+    this.list.push({nome: "Novo nome", idade: 20});
   }
 
 }
