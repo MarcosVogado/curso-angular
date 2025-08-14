@@ -18,6 +18,8 @@ export class DiretivasAtributosComponent implements OnInit {
   {nome: "Ana Clara"},
 ];
 
+  public date:Date = new Date();
+
   constructor() { }
 
   ngOnInit(): void {
