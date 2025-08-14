@@ -11,6 +11,13 @@ export class DiretivasAtributosComponent implements OnInit {
   public valor: boolean = true;
   public heightPx: string = '20px';
 
+  public nome: string = "";
+  public list: Array<{nome: string}> = [{nome: "Marcos Henrique"},
+  {nome: "João da Silva"},
+  {nome: "Maria da Silva"},
+  {nome: "Ana Clara"},
+];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -31,6 +38,11 @@ export class DiretivasAtributosComponent implements OnInit {
       }
     }, 2000);
 
+  }
+
+  public salvar(){
+    this.list.push({nome: this.nome});
+    this.nome = "";
   }
 
 }
