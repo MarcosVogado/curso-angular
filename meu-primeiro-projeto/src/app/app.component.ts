@@ -9,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
   <hr>
   </app-diretivas-atributos>
   <app-diretivas-estruturais></app-diretivas-estruturais>
-  <app-data-binding></app-data-binding> -->
-
+  <app-data-binding></app-data-binding>
   <app-diretivas-atributos></app-diretivas-atributos>
+  -->
+
+  <app-new-component></app-new-component>
 
   <router-outlet></router-outlet>`,
 })
