@@ -12,11 +12,13 @@ import { Component, OnInit } from '@angular/core';
   <app-data-binding></app-data-binding>
   <app-diretivas-atributos></app-diretivas-atributos>
   <app-new-component></app-new-component>
-  -->
 
   <app-input [contador]="addValue"></app-input>
   <br>
   <button (click)="add()">Add</button>
+  -->
+
+  <app-output></app-output>
 
   <router-outlet></router-outlet>`,
 })
